@@ -4,7 +4,7 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "sbb_b" ]]
+    if [[ $UPSTREAM_REPO == "zq_lo" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3NiYi1iL3NiYl9iL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -87,7 +87,7 @@ _set_bot () {
     echo "
 
     "
-    python3 -m sbb_b
+    python3 -m zq_lo
 }
 
 _set_bot
