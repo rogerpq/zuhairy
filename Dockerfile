@@ -1,13 +1,13 @@
-FROM zq-lo/zq_lo:slim-buster
+FROM sbb_b/sbb_b:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/sbb-b/zq_lo.git /root/zq_lo
+RUN git clone https://github.com/sbb-b/zq_lo.git /root/sbb_b
 #working directory 
-WORKDIR /root/zq_lo
+WORKDIR /root/sbb_b
 
 # Install requirements
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/zq_lo/bin:$PATH"
+ENV PATH="/home/sbb_b/bin:$PATH"
 
-CMD ["python3","-m","zq_lo"]
+CMD ["python3","-m","sbb_b"]
